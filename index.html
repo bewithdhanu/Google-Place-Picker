@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="PlacePicker.png">
+
+    <title>Google Place Picker using jQuery </title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css" />
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/4.0/examples/sign-in/signin.css" rel="stylesheet">
+    <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="PlacePicker.js"></script>
+  </head>
+
+  <body class="text-center">
+    <form class="form-signin">
+      <img class="mb-4" src="PlacePicker.png" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Google Place Picker</h1>
+      <label for="inputEmail" class="sr-only">Address</label>
+      <input type="email" id="pickup_country" class="form-control" placeholder="Address"  autofocus>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+    </form>
+<script type="text/javascript">
+    $(document).ready(function(){
+    	$("#pickup_country").PlacePicker({
+    		title:"Popup Title Here",
+    		btnClass:"btn btn-xs btn-default",
+    		key:"API_KEY_HERE",
+    		center: {lat: 17.6868, lng: 83.2185},
+    		success:function(data,address){
+    			//data contains address elements and 
+    			//address conatins you searched text
+    			//Your logic here
+    			$("#pickup_country").val(data.formatted_address);
+    		}
+    	});
+    });
+</script>
+<style>
+.form-signin {
+    width: 100%;
+    max-width: 630px;
+    padding: 15px;
+    margin: 0 auto;
+}
+</style>
+  </body>
+</html>
