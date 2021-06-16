@@ -48,7 +48,7 @@ $.fn.PlacePicker = function (t) {
             }
             $(".placePickerSubmit").click(function(){
                 var place = $(".placePicker").find(".autocomplete");
-                params.success(convertAddress(),place);
+                params.success(convertAddress(),result.formatted_address);
                 $modal.modal("hide")
             });
             $modal.on('hidden.bs.modal', function () {
