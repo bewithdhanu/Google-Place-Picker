@@ -41,7 +41,7 @@ $(document).ready(function(){
 #### HTML code
 
 ```html
-<script src="https://raw.githubusercontent.com/bewithdhanu/Google-Place-Picker/master/PlacePicker.js"></script>
+<script src="PlacePicker.js"></script>
 
 ```
 
