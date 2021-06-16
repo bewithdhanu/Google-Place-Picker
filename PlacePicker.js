@@ -48,7 +48,29 @@ $.fn.PlacePicker = function (t) {
             }
             $(".placePickerSubmit").click(function(){
                 var place = $(".placePicker").find(".autocomplete");
-                params.success(convertAddress(),result.formatted_address);
+
+                var address = result.formatted_address;
+                var data=[];
+                data["country"]="";
+                data["administrative_area_level_2"]="";
+                data["postal_code"]="";
+                data["sublocality_level_1"]="";
+                data["sublocality_level_2"]="";
+                data["route"]="";
+                data["locality"]="";
+                data["formatted_address"] = address;
+                data["location"]=result.geometry.location;
+                console.log(result)
+                $(result.address_components).each(function(i,address){
+                    $(address.types).each(function(j,type){
+                        if(type=="country"){
+                            data[type] = address.short_name;
+                        }else{
+                            data[type] = address.long_name;
+                        }
+                    });
+                });
+                params.success(data,address);
                 $modal.modal("hide")
             });
             $modal.on('hidden.bs.modal', function () {
@@ -129,26 +151,4 @@ function markerLocation(){
             }
         }
     });
-}
-function convertAddress(){
-    var data=[];
-    data["country"]="";
-    data["administrative_area_level_2"]="";
-    data["postal_code"]="";
-    data["sublocality_level_1"]="";
-    data["sublocality_level_2"]="";
-    data["route"]="";
-    data["locality"]="";
-    data["formatted_address"] = result.formatted_address;
-    data["location"]=result.geometry.location;
-    $(result.address_components).each(function(i,address){
-        $(address.types).each(function(j,type){
-            if(type=="country"){
-                data[type] = address.short_name;
-            }else{
-                data[type] = address.long_name;
-            }
-        });
-    });
-    return data;
 }
