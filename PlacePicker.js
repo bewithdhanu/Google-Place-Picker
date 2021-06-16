@@ -60,7 +60,6 @@ $.fn.PlacePicker = function (t) {
                 data["locality"]="";
                 data["formatted_address"] = address;
                 data["location"]=result.geometry.location;
-                console.log(result)
                 $(result.address_components).each(function(i,address){
                     $(address.types).each(function(j,type){
                         if(type=="country"){
