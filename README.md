@@ -24,6 +24,7 @@ Google's Place Picker library for web like Android and iOS
 <link rel="stylesheet" href="/path/to/font-awesome.min.css">
 <script src="/path/to/jquery.min.js"></script>
 <script src="/path/to/bootstrap.min.js"></script>
+<script src="PlacePicker.js"></script>
 ```
 
 #### Javascript　
@@ -45,12 +46,6 @@ $(document).ready(function(){
 
 ```
 
-#### HTML code
-
-```html
-<script src="PlacePicker.js"></script>
-
-```
 
 #### Images
 
