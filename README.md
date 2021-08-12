@@ -37,7 +37,8 @@ $(document).ready(function(){
 		btnClass:"btn btn-secondary btn-sm",
 		center: {lat: 17.6868, lng: 83.2185},
 		success:function(data,address){
-			//data contains address elements and 
+			//data contains address elements 
+			//data['location'] contains Latitude and Longitude information
 			//address conatins you searched text
 			//Your logic here
 		}
