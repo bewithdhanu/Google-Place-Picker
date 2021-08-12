@@ -26,12 +26,17 @@ Google's Place Picker library for web like Android and iOS
 <script src="/path/to/bootstrap.min.js"></script>
 <script src="PlacePicker.js"></script>
 ```
+#### Create an input field for the Place Picker.
 
-#### Javascript　
+```html
+<input type="email" id="input_location" class="form-control" placeholder="Address"  autofocus>
+```
+
+#### And then below Javascript snippet 
 
 ```javascript
 $(document).ready(function(){
-	$("#pickup_country").PlacePicker({
+	$("#input_location").PlacePicker({
 		title:"Popup Title Here",
 		key:"YOUR_API_KEY",
 		btnClass:"btn btn-secondary btn-sm",
