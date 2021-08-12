@@ -85,7 +85,7 @@ Image:
 | title      | Popup Title |
 | center      | Default map location |
 | btnClass      | Default btn class which comes on hover |
-| zoom      | Default map zoom |
+| zoom      | Set zoom level. Default: 18 |
 
 ----
 
