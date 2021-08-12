@@ -74,8 +74,6 @@ $(document).ready(function(){
 
 #### Screenshots
 
-Image:
-
 ![](https://raw.githubusercontent.com/bewithdhanu/Google-Place-Picker/master/Screenshot%202019-04-03%20at%204.43.24%20PM.png)
 
 > How map button lokks like in HTML Page
@@ -84,7 +82,7 @@ Image:
 
 > How map button lokks like in HTML Page
 
-### Required Plugins
+#### Required Plugins
 - jQuery
 - Bootstrap (css & js)
 - Font Awesone
