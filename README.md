@@ -13,6 +13,10 @@ Google's Place Picker library for web like Android and iOS
 - Support with Google API Key;
 - displays a button an the end of yout input, by clicking button you will see popup screen
 
+### How it works:
+1. Click the Map Icon inside the input field.
+2. Type an address in the Place Picker Popup.
+3. Click the Select button to insert the Place into the input field.
 
 <a href="https://paypal.me/bewithdhanu" target="_blank" title="Buy me a coffe"><img src="https://raw.githubusercontent.com/bewithdhanu/Google-Place-Picker/master/buy-me-a-coffee.png" height="180"></img></a>
 
