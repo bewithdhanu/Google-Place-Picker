@@ -1,7 +1,7 @@
 # Google Place Picker
 Google's Place Picker library for web like Android and iOS
 
-<img src="https://raw.githubusercontent.com/bewithdhanu/Google-Place-Picker/master/PlacePicker.png" width="150" height="150"></img>
+<img src="https://raw.githubusercontent.com/bewithdhanu/Google-Place-Picker/master/PlacePicker.png" width="150" height="150"/>
 
 ### Features
 
@@ -18,7 +18,7 @@ Google's Place Picker library for web like Android and iOS
 2. Type an address in the Place Picker Popup.
 3. Click the Select button to insert the Place into the input field.
 
-<a href="https://paypal.me/bewithdhanu" target="_blank" title="Buy me a coffe"><img src="https://raw.githubusercontent.com/bewithdhanu/Google-Place-Picker/master/buy-me-a-coffee.png" height="180"></img></a>
+<a href="https://paypal.me/bewithdhanu" target="_blank" title="Buy me a coffe"><img src="https://raw.githubusercontent.com/bewithdhanu/Google-Place-Picker/master/buy-me-a-coffee.png" height="180"/></a>
 
 ### Usage
 
