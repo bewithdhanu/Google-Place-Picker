@@ -14,7 +14,7 @@
 
     <!-- Custom styles for this template -->
     <link href="https://getbootstrap.com/docs/4.0/examples/sign-in/signin.css" rel="stylesheet">
-    <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="PlacePicker.js"></script>
@@ -33,12 +33,14 @@
     	$("#pickup_country").PlacePicker({
     		title:"Popup Title Here",
     		btnClass:"btn btn-xs btn-default",
-    		key:"API_KEY_HERE",
+    		key:"AIzaSyCNkBchYOmYhEapQQZxhgiWVneYNTmGUoA",
     		center: {lat: 17.6868, lng: 83.2185},
     		success:function(data,address){
     			//data contains address elements and 
     			//address conatins you searched text
     			//Your logic here
+          console.log(data);
+          console.log(address);
     			$("#pickup_country").val(data.formatted_address);
     		}
     	});
