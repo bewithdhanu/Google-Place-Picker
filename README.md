@@ -81,7 +81,7 @@ Image:
 #### Functions
 | Function name | Description                    |
 | ------------- | ------------------------------ |
-| `success()`      | with 2 parameters, one is for address components, anothe ron eis for searched address.       |
+| `success()`      | with 2 parameters, one is for address components, another one is for searched address.       |
 #### Parameters
 | Parameter name | Description                    |
 | ------------- | ------------------------------ |
