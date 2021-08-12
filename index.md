@@ -1,37 +1,88 @@
-## Welcome to GitHub Pages
+# Google Place Picker
+Google's Place Picker library for web like Android and iOS
 
-You can use the [editor on GitHub](https://github.com/bewithdhanu/Google-Place-Picker/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<img src="https://raw.githubusercontent.com/bewithdhanu/Google-Place-Picker/master/PlacePicker.png" width="150" height="150"></img>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Features
 
-### Markdown
+- No need to write a lots of code for Google Place Picker
+- Supports with jquery(3.0 or 3+), bootstrap(3.0 or 3+) and fontawesome libraries
+- A responsive, mobile-friendly Google Place Picker plugin (less than 5kb minified) built with jQuery, Font Awesome, Bootstrap modal component and Google Places API.
+- You can pick location from map or you can search location
+- Compatible with all  browsers (IE8+), and mobiles;
+- Support with Google API Key;
+- displays a button an the end of yout input, by clicking button you will see popup screen
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### How it works:
+1. Click the Map Icon inside the input field.
+2. Type an address in the Place Picker Popup.
+3. Click the Select button to insert the Place into the input field.
 
-```markdown
-Syntax highlighted code block
+<a href="https://paypal.me/bewithdhanu" target="_blank" title="Buy me a coffe"><img src="https://raw.githubusercontent.com/bewithdhanu/Google-Place-Picker/master/buy-me-a-coffee.png" height="180"></img></a>
 
-# Header 1
-## Header 2
-### Header 3
+### Usage
 
-- Bulleted
-- List
+#### Include the needed jQuery, Bootstrap and FontAwesome on the page.
+```html
+<link rel="stylesheet" href="/path/to/bootstrap.min.css">
+<link rel="stylesheet" href="/path/to/font-awesome.min.css">
+<script src="/path/to/jquery.min.js"></script>
+<script src="/path/to/bootstrap.min.js"></script>
+<script src="PlacePicker.js"></script>
+```
+#### Create an input field for the Place Picker.
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```html
+<input type="email" id="input_location" class="form-control" placeholder="Address"  autofocus>
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+#### And then below Javascript snippet 
 
-### Jekyll Themes
+```javascript
+$(document).ready(function(){
+	$("#input_location").PlacePicker({
+		title:"Popup Title Here",
+		key:"YOUR_API_KEY",
+		btnClass:"btn btn-secondary btn-sm",
+		center: {lat: 17.6868, lng: 83.2185},
+		success:function(data,address){
+			//data contains address elements 
+			//data['location'] contains Latitude and Longitude information
+			//address conatins you searched text
+			//Your logic here
+		}
+	});
+});
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/bewithdhanu/Google-Place-Picker/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```
 
-### Support or Contact
+#### Functions
+| Function name | Description                    |
+| ------------- | ------------------------------ |
+| `success()`      | with 2 parameters, one is for address components, another one is for searched address.       |
+#### Parameters
+| Parameter name | Description                    |
+| ------------- | ------------------------------ |
+| key      | Your Google API Key |
+| title      | Popup Title |
+| center      | Default map location |
+| btnClass      | Default btn class which comes on hover |
+| zoom      | Set zoom level. Default: 18 |
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+----
+
+
+#### Screenshots
+
+![](https://raw.githubusercontent.com/bewithdhanu/Google-Place-Picker/master/Screenshot%202019-04-03%20at%204.43.24%20PM.png)
+
+> How map button lokks like in HTML Page
+
+![](https://raw.githubusercontent.com/bewithdhanu/Google-Place-Picker/master/Screenshot%202019-04-03%20at%204.44.31%20PM.png)
+
+> How map button lokks like in HTML Page
+
+#### Required Plugins
+- jQuery
+- Bootstrap (css & js)
+- Font Awesone
