@@ -19,11 +19,12 @@ Google's Place Picker library for web like Android and iOS
 ### Usage
 
 #### Include the needed jQuery, Bootstrap and FontAwesome on the page.
-
+```html
 <link rel="stylesheet" href="/path/to/bootstrap.min.css">
 <link rel="stylesheet" href="/path/to/font-awesome.min.css">
 <script src="/path/to/jquery.min.js"></script>
 <script src="/path/to/bootstrap.min.js"></script>
+```
 
 #### Javascript　
 
